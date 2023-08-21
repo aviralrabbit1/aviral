@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-console.log('Working fine')
-
-// const pkg = require('..')
-// console.log(pkg())
-
 const minimist = require('minimist')
 const pkg = require('.')
 

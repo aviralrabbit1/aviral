@@ -1,15 +1,23 @@
 {
   "name": "aviral",
   "version": "1.0.1",
-  "description": "",
+  "description": "npx Business card",
   "main": "index.js",
   "bin": "npm run start",
+  "homepage": "https://github.com/aviralrabbit1",
   "scripts": {
     "start": "pokesay \"Hello there! My name is AviralVerma and i'm a software      Engineer. Here's my info: \" pikachu && ./cli.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aviralrabbit1/aviral"
+  },
+  "keywords": ["pokemon", "Business card", "resume", "personal", "profile"],
+  "author": {
+    "name": "Aviral Verma",
+    "url": "https://github.com/aviralrabbit1"
+  },
   "license": "ISC",
   "dependencies": {
     "@tiaanduplessis/pkg-rename": "^1.0.1",
