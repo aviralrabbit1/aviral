@@ -53,3 +53,8 @@ npm i prettyjson
 const pkg = require('..') //package name
 console.log(pkg())
 ```
+
+### To omit over some data,
+```
+npm i lodash.omit
+```

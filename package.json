@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@tiaanduplessis/pkg-rename": "^1.0.1",
+    "lodash.omit": "^4.5.0",
     "prettyjson": "^1.2.5"
   }
 }
