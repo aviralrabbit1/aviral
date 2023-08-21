@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "npx Business card",
   "main": "index.js",
-  "bin": "npm run start",
+  "bin": "./cli.js && npm run start",
   "homepage": "https://github.com/aviralrabbit1",
   "scripts": {
     "start": "pokesay \"Hello there! My name is AviralVerma and i'm a software      Engineer. Here's my info: \" pikachu && ./cli.js ",
