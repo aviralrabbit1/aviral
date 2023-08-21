@@ -3,9 +3,9 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "bin": "./cli.js && npm run pokemon",
+  "bin": "npm run start",
   "scripts": {
-    "pokemon": "pokesay \"Hello there! My name is AviralVerma and i'm a software      Engineer.\"",
+    "start": "pokesay \"Hello there! My name is AviralVerma and i'm a software      Engineer. Here's my info: \" pikachu && ./cli.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
