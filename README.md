@@ -1,7 +1,20 @@
 # aviral-npx_card
 
+## To publish, run
 
-## to rename a npm package
+```
+npm version patch
+npm publish
+```
+
+or 
+
+```
+npm version major
+npm publish
+```
+
+### To rename a npm package
 ```
 npm install @tiaanduplessis/pkg-rename
 ```
@@ -22,4 +35,16 @@ You can also add the --publish flag to publish the new package name as part of t
 
 ```
 pkg-rename old-package-name --publish
+```
+
+### To make our output stylish,
+
+```
+npm i prettyjson
+```
+
+### To leverage our modules, in `cli.js`, add the script
+```
+const pkg = require('..') //package name
+console.log(pkg())
 ```

@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tiaanduplessis/pkg-rename": "^1.0.1"
+    "@tiaanduplessis/pkg-rename": "^1.0.1",
+    "prettyjson": "^1.2.5"
   }
 }
