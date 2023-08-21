@@ -11,6 +11,9 @@ const pkg = require('.')
 const options = {
   alias: { json: 'j' }
 }
+
+// `npx package_name -j` flag will help get the raw JSON
+
 const argv = minimist(process.argv.slice(2), options)
 
 console.log(pkg(argv))
