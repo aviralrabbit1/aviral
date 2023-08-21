@@ -58,3 +58,9 @@ console.log(pkg())
 ```
 npm i lodash.omit
 ```
+
+### Pokemon themed command-line app, Pokesay
+```
+npm i pokesay
+```
+
