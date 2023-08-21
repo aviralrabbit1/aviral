@@ -1,4 +1,9 @@
-# aviral-npx_card
+# Package name - aviral
+
+## command - 
+```
+npx aviral
+```
 
 ## To publish, run
 
