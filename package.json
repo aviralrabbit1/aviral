@@ -16,7 +16,7 @@
   "keywords": ["pokemon", "Business card", "resume", "personal", "profile"],
   "author": {
     "name": "Aviral Verma",
-    "email": "aviral.robin@gmail.com"
+    "url": "https://github.com/aviralrabbit1"
   },
   "license": "ISC",
   "dependencies": {
