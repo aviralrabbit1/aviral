@@ -1,6 +1,6 @@
 {
   "name": "aviral-npx_card",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": "./cli.js",
@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@tiaanduplessis/pkg-rename": "^1.0.1"
+  }
 }
