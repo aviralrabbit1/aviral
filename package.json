@@ -1,19 +1,21 @@
 {
   "name": "aviral",
   "version": "1.0.5",
-  "description": "npx Business card",
+  "description": "Personal npx card for Aviral Verma (@aviralrabbit1)",
   "main": "index.js",
   "bin": {
-    "aviral": "./cli.js"
+    "aviral": "./cli.js && npm run start"
   },
   "homepage": "https://github.com/aviralrabbit1",
   "scripts": {
     "start": "pokesay \"Hello there! My name is AviralVerma and i'm a software      Engineer. Here's my info: \" pikachu && ./cli.js ",
+    "vp": "npm version patch & npm publish",
+    "vm": "npm version patch & npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aviralrabbit1/aviral"
+    "url": "git+https://github.com/aviralrabbit1/aviral.git"
   },
   "keywords": [
     "pokemon",
