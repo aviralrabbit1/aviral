@@ -4,7 +4,7 @@
   "description": "npx Business card",
   "main": "index.js",
   "bin": {
-    "aviral -y": "./cli.js"
+    "aviral": "./cli.js"
   },
   "homepage": "https://github.com/aviralrabbit1",
   "scripts": {
