@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var clear = require('clear');
+clear();
 const minimist = require('minimist')
 const pkg = require('.')
 

@@ -96,3 +96,7 @@ const argv = minimist(process.argv.slice(2), options)
 console.log(pkg(argv))
 ```
 
+### To clear the terminal before giving output,
+```
+npm install clear
+```
