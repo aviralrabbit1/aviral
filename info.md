@@ -100,3 +100,22 @@ console.log(pkg(argv))
 ```
 npm install clear
 ```
+
+to use it, add this to your script
+```javascript
+var clear = require('clear');
+clear();
+```
+
+### To access Operating System functionalities by running any system command:
+
+```
+npm install child_process
+```
+
+The `spawn` function launches a command in a new process and we can use it to pass that command any arguments
+
+```javascrit
+const { spawn } = require('child_process');
+const child = spawn('command');
+```
