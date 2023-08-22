@@ -96,3 +96,26 @@ const argv = minimist(process.argv.slice(2), options)
 console.log(pkg(argv))
 ```
 
+### To clear the terminal before giving output,
+```
+npm install clear
+```
+
+to use it, add this to your script
+```javascript
+var clear = require('clear');
+clear();
+```
+
+### To access Operating System functionalities by running any system command:
+
+```
+npm install child_process
+```
+
+The `spawn` function launches a command in a new process and we can use it to pass that command any arguments
+
+```javascrit
+const { spawn } = require('child_process');
+const child = spawn('command');
+```

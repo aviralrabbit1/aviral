@@ -1,5 +1,20 @@
 #!/usr/bin/env node
 
+var clear = require('clear');
+clear();
+
+const { exec } = require('child_process');
+
+exec('npm run start', (err, stdout, stderr) => {
+  if (err) {
+    console.error(`exec error: ${err}`);
+    return;
+  }
+
+  console.log(`${stdout}`);
+});
+
+
 const minimist = require('minimist')
 const pkg = require('.')
 
@@ -10,4 +25,6 @@ const options = {
 
 const argv = minimist(process.argv.slice(2), options)
 
-console.log(pkg(argv))
+setTimeout(() => {  
+  console.log(pkg(argv))
+}, 1600);
