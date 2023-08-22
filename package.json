@@ -4,7 +4,7 @@
   "description": "Personal npx card for Aviral Verma (@aviralrabbit1)",
   "main": "index.js",
   "bin": {
-    "aviral": "./cli.js && npm run start"
+    "aviral": "./cli.js"
   },
   "homepage": "https://github.com/aviralrabbit1",
   "scripts": {
@@ -22,7 +22,9 @@
     "Business card",
     "resume",
     "personal",
-    "profile"
+    "profile",
+    "npx card",
+    "card"
   ],
   "author": {
     "name": "Aviral Verma",
