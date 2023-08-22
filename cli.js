@@ -5,7 +5,7 @@ clear();
 
 const { exec } = require('child_process');
 
-exec('npm run start', (err, stdout, stderr) => {
+exec('pokesay \"Hello there! My name is AviralVerma and i am a software     Engineer. Here is my info: \" pikachu', (err, stdout, stderr) => {
   if (err) {
     console.error(`exec error: ${err}`);
     return;
