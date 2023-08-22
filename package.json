@@ -3,7 +3,9 @@
   "version": "1.0.3",
   "description": "npx Business card",
   "main": "index.js",
-  "bin": "./cli.js && npm run start",
+  "bin": {
+    "aviral -y": "./cli.js"
+  },
   "homepage": "https://github.com/aviralrabbit1",
   "scripts": {
     "start": "pokesay \"Hello there! My name is AviralVerma and i'm a software      Engineer. Here's my info: \" pikachu && ./cli.js ",
