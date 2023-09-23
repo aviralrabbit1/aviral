@@ -1,42 +1,5 @@
-# [Aviral](https://www.npmjs.com/package/aviral)
-
-## To interact in your terminal, run command - 
-```sh
-# <package_manager> aviral, where <package_manager> = npx, pnpx or bun. For optimized loading, use
-bunx aviral
-```
-
-## To check the current package version, run
-- ```sh
-  # For updating the patch version:
-  npm version patch
-  ```
-- ```sh
-  # For updating the major version:
-  npm version major
-  ```
-
-## To publish the package [npm](https://www.npmjs.com/) registry, run
-```sh
-npm publish
-```
-
-### To rename a npm package,
-
-1. #### Unpublishing a Package from the npm registry Within 24 Hours of Publication,
-  ```sh
-  npm unpublish <package_name> --force
-  ```
-
-2. #### Unpublishing a Package Within 72 Hours (Subject to Specific Requirements):
-  ```sh
-  npm unpublish <package_name> -f
-  ```
-
-3. #### Renaming and Publishing a New Package Name:
-  ```sh
-  pkg-rename old-package-name --publish
-  ```
+### **`#!/usr/bin/env node`**: 
+This is called a "shebang" line and is used to tell the system that this script should be executed using the Node.js interpreter located in the user's PATH. 
 
 ### To enhance the aesthetic presentation of our output, employ
 ```sh
@@ -84,15 +47,23 @@ For example, to parse command-line arguments:
 ```js
 const minimist = require('minimist')
 const pkg = require('.')
+// imports the current directory (denoted by .) as a module. The package.json file of the current project is being imported. The pkg variable now contains the data from the project's package.json.
 
 const options = {
   alias: { json: 'j' } // Define an alias for accessing raw JSON data using the -j flag, e.g., `npx package_name -j`
+  // It configures options for the minimist module.
 }
 
 const argv = minimist(process.argv.slice(2), options)
 
 console.log(pkg(argv))
 ```
+
+- `process.argv` is an array that contains command-line arguments, with the first two items being the path to the Node.js executable and the path to the script itself.
+- `slice(2)` is used to exclude these first two items. 
+- The minimist function then parses the remaining arguments using the provided `options`.
+- The result is stored in the `argv` variable.
+
 
 ### To clear the terminal screen prior to displaying output, you can employ the `clear` module by executing the following command:,
 ```
@@ -118,7 +89,7 @@ We can utilize the spawn function from the child_process module to initiate the 
 const { spawn } = require('child_process');
 const child = spawn('commandName', ['arg1', 'arg2', ...], { options });
 ```
-In this code snippet:
+In the above code snippet:
 
 - `commandName` represents the name of the system command you want to execute.
 - `[arg1, arg2, ...]` is an array of arguments to be passed to the command.
