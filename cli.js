@@ -27,4 +27,4 @@ const argv = minimist(process.argv.slice(2), options)
 
 setTimeout(() => {  
   console.log(pkg(argv))
-}, 1600);
+}, 2600);
