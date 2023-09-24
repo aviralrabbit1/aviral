@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-var clear = require('clear');
+import clear from 'clear';
 clear();
 
-const { exec } = require('child_process');
+import { exec } from 'child_process';
 
 exec('pokesay \"Hello there! My name is AviralVerma and i am a software     Engineer. Here is my info: \" pikachu', (err, stdout, stderr) => {
   if (err) {
@@ -15,16 +15,16 @@ exec('pokesay \"Hello there! My name is AviralVerma and i am a software     Engi
 });
 
 
-const minimist = require('minimist')
-const pkg = require('.')
+import minimist from 'minimist';
+import pkg from './index.mjs';
 
 const options = {
   alias: { json: 'j' } // -j is a flag to access raw json data,
-                      //  running `npx package_name -j`
+  //  running `npx package_name -j`
 }
 
 const argv = minimist(process.argv.slice(2), options)
 
 setTimeout(() => {  
-  console.log(pkg(argv))
+  console.log(pkg(argv));
 }, 2600);
