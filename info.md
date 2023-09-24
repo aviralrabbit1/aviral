@@ -42,34 +42,36 @@ In the above code snippet:
 - `[arg1, arg2, ...]` is an array of arguments to be passed to the command.
 - `{ options }` refers to an optional configuration object where you can specify various options for the child process.
 
-### Inquirer - a collection of common interactive command line user interfaces.
+### Inquirer - A Comprehensive Library for common Interactive Command Line Interfaces
+Inquirer is a versatile JavaScript library that provides a robust set of tools for creating interactive command-line user interfaces. It empowers developers to efficiently gather user input, facilitate choices, and manage dialogues within terminal applications. Install it using:
 ```sh
 npm install inquirer
 ```
-or
+
+If you intend to use `Inquirer` as a development dependency, ensuring it doesn't affect other libraries,
 ```sh
 # To install as devDependency
 npm install --save inquirer
 ```
 
-To use `inquirer` in your script,
+#### Implementation 
+To utilize Inquirer within your script, import it and create a prompt module.
+
 ```js
 import inquirer from 'inquirer';
 const prompt = inquirer.createPromptModule(); // creates a self contained inquirer module,
-// doesn't affect other libraries relying on inquirer when overwriting or adding new prompt types.
+// doesn't interfere with other libraries that use Inquirer when overwriting or adding new prompt types.
 
 inquirer
   .prompt([
-    /* Pass your questions in here 
-    e.g.
-    const questions = [
+    // Define your questions here e.g.
+    /* const questions = [
       {
         type: 'input',
         name: 'name',
         message: 'What is your name?',
       }
-    ]    
-    */
+    ] */   
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
@@ -77,16 +79,16 @@ inquirer
   })
   .catch((error) => {
     if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
+      // Handle the scenario where the prompt couldn't be rendered
     } else {
-      // Something else went wrong
+      // Handle other error scenarios
     }
   });
 ```
 
-Prompts and Questions can also be put together inside a function and used as callback.
-e.g.
+Furthermore, we can encapsulate our prompts and questions within a function, which can either be synchronous or asynchronous: E.g.
 ```js
+// inquiry.mjs
 function inquiry() {
   const questions = [
     {
@@ -95,7 +97,7 @@ function inquiry() {
       message: 'What is your name?',
     },
   ];
-  
+
   return inquirer
     .prompt(questions)
     .then(answers => {
@@ -106,15 +108,15 @@ function inquiry() {
     });
 }
 
-export default inquiry;
+export default inquiry; // This function can be imported and used in another file (e.g., cli.js)
 ```
 
-#### Miscellaneous: To install extra functional `inquirer` devDependency, add
+#### Miscellaneous: Installing additional functionality `inquirer-prompt-suggest` devDependency,
 ```sh
 npm install --save inquirer-prompt-suggest
 ```
 
-To use `inquirer-prompt-suggest` in your script,
+Once installed, you can incorporate `inquirer-prompt-suggest` into your script:
 ```js
 import inquirer from 'inquirer';
 import { promptSuggest } from "inquirer-prompt-suggest";
@@ -130,7 +132,7 @@ inquirer.prompt(questions).then(answers => {
   console.log(JSON.stringify(answers, null, '  '));
 });
 ```
-example: 
+For example, this feature cancreate dynamic suggestions for user input, making the command-line interfaces even more user-friendly and efficient. 
 ```js
 inquirer.prompt({
   type: 'suggest',
