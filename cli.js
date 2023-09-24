@@ -16,7 +16,7 @@ exec('pokesay \"Hello there! My name is AviralVerma and i am a software     Engi
 
 
 import minimist from 'minimist';
-import pkg from './index.mjs';
+import box from './index.mjs';
 
 const options = {
   alias: { json: 'j' } // -j is a flag to access raw json data,
@@ -26,5 +26,5 @@ const options = {
 const argv = minimist(process.argv.slice(2), options)
 
 setTimeout(() => {  
-  console.log(pkg(argv));
+  console.log(box(argv));
 }, 2600);

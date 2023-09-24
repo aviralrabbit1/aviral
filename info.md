@@ -5,8 +5,8 @@ This is called a "shebang" line and is used to tell the system that this script 
 
 #### To make use of [Pokesay](https://github.com/aviralrabbit1/aviral/blob/main/ui.md#pokesay-a-command-line-application-with-a-pok%C3%A9mon-theme), incorporate the following script into `./cli.js` to parse command-line arguments:
 ```js
-const minimist = require('minimist')
-const pkg = require('.')
+import minimist from 'minimist';
+import pkg from '.';  // e.g. import box from './index.mjs';
 // imports the current directory (denoted by .) as a module. The package.json file of the current project is being imported. The pkg variable now contains the data from the project's package.json.
 
 const options = {
@@ -41,3 +41,8 @@ In the above code snippet:
 - `commandName` represents the name of the system command you want to execute.
 - `[arg1, arg2, ...]` is an array of arguments to be passed to the command.
 - `{ options }` refers to an optional configuration object where you can specify various options for the child process.
+
+### Inquirer - a collection of common interactive command line user interfaces.
+```
+npm install inquirer
+```
