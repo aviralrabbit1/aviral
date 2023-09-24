@@ -1,4 +1,4 @@
-# [Aviral](https://www.npmjs.com/package/aviral)
+# Package
 
 ## To interact in your terminal, run command - 
 ```sh
