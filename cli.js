@@ -28,3 +28,26 @@ const argv = minimist(process.argv.slice(2), options)
 setTimeout(() => {  
   console.log(box(argv));
 }, 2600);
+
+import inquirer from "inquirer";
+
+const prompt = inquirer.createPromptModule(); // creates a self contained inquirer module,
+
+const questions = [
+  {
+    type: 'input',
+    name: 'name',
+    message: 'What is your name?',
+  }
+]
+
+setTimeout(() => {  
+  inquirer
+  .prompt(questions)
+  .then(answers => {
+    console.log(`Hello, ${answers.name}! Have a great day ahead!`);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}, 3000);

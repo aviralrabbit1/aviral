@@ -43,6 +43,68 @@ In the above code snippet:
 - `{ options }` refers to an optional configuration object where you can specify various options for the child process.
 
 ### Inquirer - a collection of common interactive command line user interfaces.
-```
+```sh
 npm install inquirer
+```
+or
+```sh
+# To install as devDependency
+npm install --save inquirer
+```
+
+To use `inquirer` in your script,
+```js
+import inquirer from 'inquirer';
+const prompt = inquirer.createPromptModule(); // creates a self contained inquirer module,
+// doesn't affect other libraries relying on inquirer when overwriting or adding new prompt types.
+
+inquirer
+  .prompt([
+    /* Pass your questions in here */
+  ])
+  .then((answers) => {
+    // Use user feedback for... whatever!!
+  })
+  .catch((error) => {
+    if (error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else went wrong
+    }
+  });
+```
+
+#### Miscellaneous: To install extra functional `inquirer` devDependency, add
+```sh
+npm install --save inquirer-prompt-suggest
+```
+
+To use `inquirer-prompt-suggest` in your script,
+```js
+import inquirer from 'inquirer';
+import { promptSuggest } from "inquirer-prompt-suggest";
+
+inquirer.prompt({
+  type: 'suggest',
+  name: 'some name',
+  message: "Some Message",
+  suggestions: ['Some Suggestions'],
+});
+
+inquirer.prompt(questions).then(answers => {
+  console.log(JSON.stringify(answers, null, '  '));
+});
+```
+example: 
+```js
+inquirer.prompt({
+  type: 'suggest',
+  name: 'day',
+  message: "How's the day gonna be for you tomorrow?",
+  suggestions: ['Fantastic', 'Great', 'Amazing', 'Happening', 'Fulfilling', 'Lovely'],
+});
+
+inquirer.prompt(questions).then(answers => {
+  console.log(JSON.stringify(answers, null, '  '));
+});
 ```
