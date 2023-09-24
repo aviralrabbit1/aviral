@@ -60,10 +60,20 @@ const prompt = inquirer.createPromptModule(); // creates a self contained inquir
 
 inquirer
   .prompt([
-    /* Pass your questions in here */
+    /* Pass your questions in here 
+    e.g.
+    const questions = [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'What is your name?',
+      }
+    ]    
+    */
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
+    // e.g. console.log(`Hello, ${answers.name}! Have a great day ahead!`);
   })
   .catch((error) => {
     if (error.isTtyError) {
@@ -72,6 +82,31 @@ inquirer
       // Something else went wrong
     }
   });
+```
+
+Prompts and Questions can also be put together inside a function and used as callback.
+e.g.
+```js
+function inquiry() {
+  const questions = [
+    {
+      type: 'input',
+      name: 'name',
+      message: 'What is your name?',
+    },
+  ];
+  
+  return inquirer
+    .prompt(questions)
+    .then(answers => {
+      console.log(`Hello, ${answers.name}! Have a great day ahead!`);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+export default inquiry;
 ```
 
 #### Miscellaneous: To install extra functional `inquirer` devDependency, add
