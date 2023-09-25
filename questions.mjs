@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import open  from "open";
 
 const prompt = inquirer.createPromptModule(); // creates a self contained inquirer module,
 
@@ -26,9 +27,13 @@ function inquiry() {
         const { username, action } = answers;
         switch (action) {
             case 'Send me an email':
-                console.log(`Sending me an email?}`);
-                // email sending logic here
-                break;    
+                console.log(`Opening gmail...`);
+                open("mailto:aviral.robin@gmail.com");
+                setTimeout(() => {
+                    console.log("\n See you soon at the inbox!\n");                    
+                }, 3000);                
+                break;   
+                 
             case 'Quit':
                 console.log(`Have a great day ahead, ${answers.username}!`);
                 console.log('Goodbye!');

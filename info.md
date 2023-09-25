@@ -186,3 +186,12 @@ function inquiry() {
     });
 }
 ```
+
+To Open stuff like URLs, files, executables. Cross-platform from terminal, install `open` library
+```sh
+npm install open
+```
+To send mail, add in your script,
+```js
+open("mailto:your_mail@domain");
+```
