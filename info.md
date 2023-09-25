@@ -197,3 +197,8 @@ To send an email, add this line in the appropriate switch case,
 open("mailto:your_mail@domain");
 ```
 This will seamlessly open email clients with the specified email address, facilitating email composition and sending.
+
+### To download a PDF, use the `axios` library for making HTTP requests and the `fs` (file system) module to save the downloaded PDF.
+```sh
+npm install axios
+```
