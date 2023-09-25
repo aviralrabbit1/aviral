@@ -146,19 +146,19 @@ inquirer.prompt(questions).then(answers => {
 });
 ```
 
-To add subsequent inquiries one by one, e.g choosing between sending a mail or quitting the terminal,
+To facilitate a step-by-step interaction with the user, say allowing them to choose between sending an email or terminating the terminal session, we employ the Inquirer.js library for enhanced user engagement and a structured experience.
 ```js
 function inquiry() {
   const questions = [
     {
       type: 'input',
-      name: 'username', // Input and store user's name
+      name: 'username', // Prompt the user for their name
       message: 'What is your name?',
     },
     {
       type: 'list',
       name: 'action',
-      message: ({ username }) => `What would you like to do, ${username}?`, // utilising the username here
+      message: ({ username }) => `What action would you like to take?, ${username}?`, // utilising the username here
       choices: [
         'Send me an email',
         'Quit',
@@ -178,7 +178,7 @@ function inquiry() {
             case 'Quit':
                 console.log(`Have a great day ahead, ${answers.username}!`);
                 console.log('Goodbye!');
-                process.exit(0); // exit terminal
+                process.exit(0); // Terminate the terminal session
           }
         })    
     .catch(error => {
@@ -187,11 +187,13 @@ function inquiry() {
 }
 ```
 
-To Open stuff like URLs, files, executables. Cross-platform from terminal, install `open` library
+### To open various resources such as URLs, files, or executables across different platforms from the terminal,
 ```sh
 npm install open
 ```
-To send mail, add in your script,
+To send an email, add this line in the appropriate switch case,
 ```js
+// Replace 'your_mail@domain' with the desired email address
 open("mailto:your_mail@domain");
 ```
+This will seamlessly open email clients with the specified email address, facilitating email composition and sending.
