@@ -21,6 +21,7 @@
     "boxen": "^7.1.1",
     "child_process": "^1.0.2",
     "clear": "^0.1.0",
+    "gdown": "^1.0.6",
     "inquirer": "^9.2.11",
     "inquirer-prompt-suggest": "^0.1.0",
     "lodash.omit": "^4.5.0",
