@@ -1,5 +1,11 @@
 import inquirer from "inquirer";
 import open  from "open";
+import axios from 'axios' // for making http request
+import fs from 'fs';
+import path from 'path';
+import os from 'os';
+// import gdown from 'gdown';
+import { exec } from 'child_process'; // For running commands from terminal
 
 const prompt = inquirer.createPromptModule(); // creates a self contained inquirer module,
 
@@ -24,6 +30,7 @@ function inquiry() {
       choices: [
         'Send me an email',
         'Schedule a chat/meeting?',
+        // 'Download my resume?',
         'Quit',
       ],
     },
@@ -40,16 +47,26 @@ function inquiry() {
                 setTimeout(() => {
                     console.log("\nSee you soon at the inbox!\n");    
                     greeting(answers.username);                
-                }, 1500);                
+                }, 1500);
                 break;
+
             case 'Schedule a chat/meeting?':
                 console.log(`Scheduling a time...`);
                 open("https://www.picktime.com/abdd237e-2bff-4ad3-b24a-fea96c268a7a");
                 setTimeout(() => {
                     console.log("\nWill see you there!\n");
                     greeting(answers.username);                    
-                }, 1500);                
+                }, 1500);    
                 break;
+
+            // case 'Download my resume?':
+            //     console.log(`Downloading resume...`);
+            //     downloadPDF();
+            //     // curlPDF();
+            //     setTimeout(() => {  
+            //         greeting(answers.username);                
+            //     }, 1500);
+
             case 'Quit':
                 console.log(`Have a great day ahead, ${answers.username}!`);
                 setTimeout(() => {

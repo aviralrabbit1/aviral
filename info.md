@@ -197,3 +197,16 @@ To send an email, add this line in the appropriate switch case,
 open("mailto:your_mail@domain");
 ```
 This will seamlessly open email clients with the specified email address, facilitating email composition and sending.
+
+
+### (WIP )To download a PDF, 
+
+1. use the `axios` library for making HTTP requests and the `fs` (file system) module to save the downloaded PDF.
+```sh
+npm install axios
+```
+
+2. Use gdown (Google Drive downloader)to download a file from a shared Google Drive link.
+   ```sh
+   npm install gdown --save
+   ```
