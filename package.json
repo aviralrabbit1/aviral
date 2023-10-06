@@ -1,6 +1,6 @@
 {
   "name": "aviral",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Personal npx card for Aviral Verma (@aviralrabbit1)",
   "main": "index.mjs",
   "type": "module",
