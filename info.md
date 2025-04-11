@@ -7,11 +7,13 @@ This is called a "shebang" line and is used to tell the system that this script 
 ```js
 import minimist from 'minimist';
 import pkg from '.';  // e.g. import box from './index.mjs';
-// imports the current directory (denoted by .) as a module. The package.json file of the current project is being imported. The pkg variable now contains the data from the project's package.json.
+// imports the current directory (denoted by .) as a module.
+// The package.json file of the current project is being imported.
+// The pkg variable now contains the data from the project's package.json.
 
 const options = {
-  alias: { json: 'j' } // Define an alias for accessing raw JSON data using the -j flag, e.g., `npx package_name -j`
-  // It configures options for the minimist module.
+  alias: { json: 'j' } // Define an alias for accessing raw JSON data using the -j flag,
+                       // e.g., `npx package_name -j`. It configures options for the minimist module.
 }
 
 const argv = minimist(process.argv.slice(2), options)
