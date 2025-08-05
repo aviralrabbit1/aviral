@@ -13,3 +13,17 @@ To learn how it was made, reference:
 - For package related instructions, [Package](https://github.com/aviralrabbit1/aviral/blob/main/package.md#Package)
 - To checkout the UI and formatting , [UI](https://github.com/aviralrabbit1/aviral/blob/main/UI.md#UI)
 - For other information, [Info](https://github.com/aviralrabbit1/aviral/blob/main/info.md#Info)
+
+To install dependencies:
+
+```bash
+bun install
+```
+
+To run:
+
+```bash
+bun run index.mjs
+```
+
+This project was created using `bun init` in bun v1.2.9. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

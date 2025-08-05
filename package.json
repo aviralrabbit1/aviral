@@ -2,7 +2,7 @@
   "name": "aviral",
   "version": "3.0.2",
   "description": "Personal npx card for Aviral Verma (@aviralrabbit1)",
-  "main": "index.mjs",
+  "module": "index.mjs",
   "type": "module",
   "bin": {
     "aviral": "./cli.js"
@@ -45,5 +45,12 @@
     "profile",
     "npx card",
     "card"
-  ]
+  ],  
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
 }

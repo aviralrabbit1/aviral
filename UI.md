@@ -86,7 +86,8 @@ npm install boxen
   ```json
   {
     ...
-    "main": "index.mjs",
+    // "main": "index.mjs",
+    "module": "index.mjs",
     "type": "module",
     ...
   }
